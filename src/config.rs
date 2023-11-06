@@ -736,12 +736,12 @@ mod tests {
             submit_via_bianry: bool,
         ) -> anyhow::Result<()> {
             let generated = super::generate(
-                "2018",
+                "2021",
                 template_new_dependencies_content
                     .then_some(include_str!("../resources/atcoder-deps.toml")),
                 template_new_lockfile.then_some("./cargo-lock-template.toml"),
                 PlatformKind::Atcoder,
-                "1.42.0",
+                "1.70.0",
                 submit_via_bianry,
                 ATCODER_RUST_LANG_ID,
             )?;
